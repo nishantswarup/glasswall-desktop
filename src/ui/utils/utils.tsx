@@ -24,7 +24,7 @@ export const OUTPUT_DIR_FLAT            = "flat";
 export const OUTPUT_DIR_HIERARCY        = "hierarcy";
 
 export const WELCOME_PAGE_VISTIED_KEY   = "visited"
-export const WELCOME_PAGE_VISTIED_VAL   = "yes1"
+export const WELCOME_PAGE_VISTIED_VAL   = "yes"
 
 export const DOCKER_OUPUT_DIR_KEY       = "DOCKER_OUPUT_DIR"
 export const CLOUD_OUPUT_DIR_KEY        = "CLOUD_OUPUT_DIR"
