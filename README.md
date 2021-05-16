@@ -20,6 +20,7 @@ Glasswall Desktop is a desktop application that provides multi file drag and dro
 2. To support different directory structures, give freedom to save the files at custom directory structure or at default location by maintaining the same directory as that of the parent folder.
 3. To support different platforms (Windows, MAC and Linux)
 4. To provide online and offline file-rebuild support. The online version to use glasswall-rebuild cloud hosting of rebuild engine to rebuild files. The offline version to use glasswall docker image to provide the ame functions offline.
+5. So for running the offline mode user has to install the docker on the respective OS (Windows/MAC/Ubuntu) https://docs.docker.com/engine/install/
 
 # [Glasswall Desktop](https://k8-proxy.github.io/glasswall-desktop/)
 
@@ -54,7 +55,7 @@ Warning: This software is under active development. Use at your own risk.
 
 ### macOS
 
-Download the latest [glasswall-desktop release](https://github.com/k8-proxy/glasswall-desktop/releases/download/v1.0.3/glasswall-desktop-1.0.3.dmg).
+Download the latest [glasswall-desktop release](https://github.com/k8-proxy/glasswall-desktop/releases/download/v1.0.6/glasswall-desktop-1.0.6.dmg).
 
 Mac users will need to follow the below steps on the app when you first launch it, until we have [code signing](https://www.electron.build/code-signing) set up
 
@@ -76,12 +77,12 @@ TBD: Will automatically update when a new release is available.
 
 ### Windows
 
-Download the latest [glasswall-desktop release](https://github.com/k8-proxy/glasswall-desktop/releases/download/v1.0.3/glasswall-desktop-Setup-1.0.3.exe)
+Download the latest [glasswall-desktop release](https://github.com/k8-proxy/glasswall-desktop/releases/download/v1.0.6/glasswall-desktop-Setup-1.0.6.exe)
 
 Windows users will need to follow the below steps to install and launch the application.
 
 * **Step 1**
-Download the package from the above link, observe that .exe executable would be downloaded, glasswall-desktop-Setup-1.0.3.exe.
+Download the package from the above link, observe that .exe executable would be downloaded, glasswall-desktop-Setup-1.0.6.exe.
 
 
 * **Step 2**
@@ -147,35 +148,22 @@ Allow by clicking "Share It".
 Once added, further rebuilds will not prompt to allow sharing the directory each time when using docker to rebuild files.
 
 
-### Linux Snap
+### Linux App Image
 
 Glasswall desktop is only available for 64-bit Linux systems.
-Download the latest [glasswall-desktop release](https://github.com/k8-proxy/glasswall-desktop/releases/download/v1.0.3/glasswall-desktop-1.0.3.snap)
+Download the latest [glasswall-desktop release](https://github.com/k8-proxy/glasswall-desktop/releases/download/v1.0.6/glasswall-desktop-1.0.6.AppImage)
 
 Linux/Ubuntu users will need to follow the below steps on the app when you first launch it.
 
 * **Step 1**
-Install the snapd package if not present in the linux/ubuntu version you are using.
+Make the downloaded package as an executable by running below command.
 
-![glasswall-desktop Screenshot](img/Linux_Snap_Install_Command.JPG)
-
+**Command :** chmod a+x glasswall-desktop-1.0.6.AppImage
 
 * **Step 2**
-Once snapd package has been installed verify it has been installed successfully by running below command.
-
-![glasswall-desktop Screenshot](img/Linux_SnapPackage_Verification_Command.JPG)
-
-
-* **Step 3**
-Unzip the downloaded desktop package and move inside the directory. And run below command to install the package
-
-![glasswall-desktop Screenshot2](img/Linux_DesktopApp_Install_Command.JPG)
-
-
-* **Step 4**
 Run below command to launch the desktop application
 
-![glasswall-desktop Screenshot](img/Linux_DesktopApp_Run_Command.JPG)
+**Command :** ./glasswall-desktop-1.0.6.AppImage
 
 
 ### Installing from source
@@ -234,4 +222,5 @@ Bug reports are welcome on GitHub at https://github.com/k8-proxy/glasswall-deskt
 * MAC Application: Incase of cloud rebuild failure, follow below steps:
 * Delete the **config** folder under this path /Users/<system-user>/Library/Application\Support/glasswall-desktop
 * On command prompt run this command **rm -rf config* ** to delete all the content in above path
+* Incase docker is not installed and user installs the docker, while desktop app is in running state, user is requested to relaunch the desktop app.
 * To run on Linux systems as non-root user, make sure to follow this link to allow the user to access docker - https://docs.docker.com/engine/install/linux-postinstall/

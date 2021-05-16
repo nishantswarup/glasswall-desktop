@@ -14,7 +14,7 @@ export const  WINDOWS_BUILD =  "https://github.com/" + packageJson.repo_owner + 
 
 export const  LINUX_BUILD   =   "https://github.com/" + packageJson.repo_owner + "/" + packageJson.repo + 
                                 "/releases/download/"+ packageJson.tagVersion + "/" + packageJson.app_name + "-" 
-                                 +  packageJson.version + ".snap"
+                                 +  packageJson.version + ".AppImage"
 export const  RELEASE_URL   =   "https://github.com/" + packageJson.repo_owner + "/" + packageJson.repo + "/releases/";
 
 export let getOS = () =>{

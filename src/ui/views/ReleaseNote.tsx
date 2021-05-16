@@ -6,26 +6,36 @@ import Footer from '../components/Footer';
 
 const RELEAE_NOTES                 =[
     {
-        "date":"April 5th 2020",
+        "version":"1.0.5",
+        "date":"April 9th 2021",
+        "desc":"Cloud rebuild file size limit removed"
+    },{
+        "version":"1.0.4",
+        "date":"April 5th 2021",
         "desc":"Linux fixes"
-      },
+    },
     {
-      "date":"March 17th 2020",
+      "version":"1.0.3",
+      "date":"March 17th 2021",
       "desc":"Added support for both Http and Https under setting"
     }, 
     {
+      "version":"1.0.2",
       "date":"November 16th 2020",
       "desc":"Integrated new Docker image Name/TAG with Application."
     },
     {
+      "version":"1.0.1",
       "date":"December 10th  2020",
       "desc":"Analysis of files rebuild has been integrated in cloud and docker."
     }, 
     {
+      "version":"1.0.0",
       "date":"December 8th  2020",
       "desc":"Maintained History for Policy Management changes."
     },
     {
+      "version":"0.0.9",
       "date":"December 3rd  2020",
       "desc":"Policy Management applied to files rebuilt through Cloud Versionn"
     }
@@ -125,7 +135,7 @@ function ReleaseNote(){
                     return  <Grid key ={index} className={classes.releaseNoteContainer}>                    
                     <div className={classes.releaseGrid}>
                         <div className={classes.releaseList}>                            
-                            <div className={classes.releaseVersion}>{Utils.VERSION}</div>
+                            <div className={classes.releaseVersion}>{issue.version}</div>
                             <h4 className={classes.releaseDate}>{issue.date} </h4>
                         </div>
                         <div className={classes.releaseContent}>
